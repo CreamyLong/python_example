@@ -19,7 +19,7 @@ ci:
 repos:
 # Standard hooks
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.4.0
+  rev: v4.5.0
   hooks:
   - id: check-added-large-files
   - id: check-case-conflict
@@ -33,19 +33,13 @@ repos:
   - id: requirements-txt-fixer
   - id: trailing-whitespace
 
-# Black, the code formatter, natively supports pre-commit
-- repo: https://github.com/psf/black-pre-commit-mirror
-  rev: 23.7.0
-  hooks:
-  - id: black
-    files: ^(docs)
-
 # Lints code
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: "v0.0.287"
+  rev: "v0.1.6"
   hooks:
   - id: ruff
     args: ["--fix", "--show-fixes"]
+  - id: ruff-format
 
 # Changes tabs to spaces
 - repo: https://github.com/Lucas-C/pre-commit-hooks
