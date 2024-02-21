@@ -1,6 +1,33 @@
 python_example
 ==============
 
+c++ direct call from python
+
+
+cuda call from python 
+-----------
+compile the cuda code
+```
+nvcc -m64 -arch=sm_75 -o  addgpu.dll -Xcompiler "/LD /D_USRDLL /D_WINDLL" add.cu
+```
+
+> https://zhuanlan.zhihu.com/p/646734746
+> https://cloud.tencent.com/developer/article/1944944  
+> https://github.com/PWhiddy/pybind11-cuda
+
+thrid-party library call from python
+-----------
+> https://zhuanlan.zhihu.com/p/110465274
+
+
+torch extension call from python
+-----------
+https://godweiyang.com/2021/03/18/torch-cpp-cuda/
+
+c++ direct call from C++
+
+
+
 [![Gitter][gitter-badge]][gitter-link]
 
 |      CI              | status |
@@ -34,7 +61,7 @@ Installation
 ------------
 
  - clone this repository
- - `pip install -e .`
+ - `pip install ./python_example`
 
 CI Examples
 -----------
